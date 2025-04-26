@@ -1,0 +1,87 @@
+# 🔵 Basic Docker Commands
+
+# Check installed Docker version
+docker --version
+
+# Pull an image from Docker Hub
+docker pull image-name
+
+# List all images on your local machine
+docker images
+
+# Run a container from an image
+docker run image-name
+
+# Run a container in interactive mode
+docker run -it image-name
+
+# Run a container in detached mode (background)
+docker run -d image-name
+
+# Run a container with custom name
+docker run --name my-container image-name
+
+# List running containers
+docker ps
+
+# List all containers (including stopped ones)
+docker ps -a
+
+# Stop a running container
+docker stop container-id-or-name
+
+# Start a stopped container
+docker start container-id-or-name
+
+# Restart a container
+docker restart container-id-or-name
+
+# Remove a container
+docker rm container-id-or-name
+
+# Remove an image
+docker rmi image-name
+
+# View logs of a container
+docker logs container-id-or-name
+
+# Execute a command inside a running container
+docker exec -it container-id-or-name bash
+
+# Build an image from a Dockerfile
+docker build -t custom-image-name .
+
+# Push an image to Docker Hub
+docker push username/image-name
+
+# Pull an image from Docker Hub
+docker pull username/image-name
+
+# Save a Docker image to a tar archive
+docker save -o my-image.tar image-name
+
+# Load a Docker image from a tar archive
+docker load -i my-image.tar
+
+
+-------------------------
+
+
+# Run a container with port mapping
+docker run -p host-port:container-port image-name
+
+# Run a container with volume mounting
+docker run -v /host/path:/container/path image-name
+
+# Check container resource usage (CPU, RAM)
+docker stats
+
+# Remove all stopped containers
+docker container prune
+
+# Remove all unused images
+docker image prune
+
+# System cleanup (containers, images, volumes, networks)
+docker system prune
+
