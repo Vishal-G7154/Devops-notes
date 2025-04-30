@@ -1,0 +1,21 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+models:
+  -name: deepseek r1
+  provider: ollama
+  model: deepseek-r1
+  -name: qwen 2.5-coder:1.5b
+  provider: ollama
+  model: qwen 2.5-coder:1.5b
+  roles:
+    -autocomplete
+context:
+  -providers: code
+  -providers: docs
+  -providers: diff
+  -providers: terminal
+  -providers: problems
+  -providers: folder
+  -providers: codebase
+         
